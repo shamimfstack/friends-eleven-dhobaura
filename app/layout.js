@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Navbar from "./components/shared/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,16 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav className="py-5 px-4">
-          <ul className="flex gap-8">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/register">Register</Link></li>
-            <li><Link href="/login">Login</Link></li>
-            <li><Link href="/dashboard">Dashboard</Link></li>
-            <li><Link href="/contact">Contact Us</Link></li>
-            <li><Link href="/about">About Us</Link></li>
-          </ul>
-        </nav>
+        <Navbar />
         <hr />
         {children}
         </body>
